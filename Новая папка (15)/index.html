@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MUZ SAROYI — FAMILY PARK SAMARQAND</title>
+
+<meta name="description"
+content="Samarqand Family Park Muz Saroyi — muz uchish, oilaviy dam olish va ko'ngilochar maskan.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5fbff;
+color:#092d50;
+overflow-x:hidden;
+}
+
+:root{
+--blue:#008cff;
+--blue2:#005bc4;
+--dark:#032c55;
+--ice:#eaf8ff;
+--white:#fff;
+--text:#123b5d;
+--gray:#6d8498;
+--orange:#ff8a00;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button{
+font-family:inherit;
+cursor:pointer;
+}
+
+.container{
+width:min(1400px,90%);
+margin:auto;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:82px;
+z-index:1000;
+background:rgba(255,255,255,.88);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(0,100,200,.1);
+}
+
+.nav{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:22px;
+font-weight:900;
+color:var(--dark);
+}
+
+.logo-icon{
+width:48px;
+height:48px;
+border-radius:15px;
+display:grid;
+place-items:center;
+font-size:27px;
+color:#fff;
+background:linear-gradient(135deg,#00b7ff,#0061d9);
+box-shadow:0 10px 30px rgba(0,120,255,.25);
+}
+
+.menu{
+display:flex;
+align-items:center;
+gap:34px;
+list-style:none;
+}
+
+.menu a{
+font-size:14px;
+font-weight:700;
+color:#34556e;
+transition:.3s;
+}
+
+.menu a:hover{
+color:var(--blue);
+}
+
+.nav-btn{
+padding:13px 22px;
+background:var(--blue);
+color:#fff!important;
+border-radius:13px;
+}
+
+.mobile-btn{
+display:none;
+border:0;
+background:none;
+font-size:28px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+padding-top:82px;
+overflow:hidden;
+
+background:
+radial-gradient(circle at 85% 25%,rgba(0,164,255,.25),transparent 25%),
+radial-gradient(circle at 10% 80%,rgba(0,98,255,.14),transparent 30%),
+linear-gradient(135deg,#f8fdff,#d9f3ff);
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:800px;
+height:800px;
+border-radius:50%;
+right:-300px;
+top:-300px;
+background:rgba(255,255,255,.5);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.hero-text{
+max-width:720px;
+}
+
+.tag{
+display:inline-flex;
+padding:10px 17px;
+border-radius:50px;
+background:#fff;
+color:var(--blue);
+font-size:13px;
+font-weight:900;
+box-shadow:0 10px 30px rgba(0,70,130,.08);
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:clamp(55px,7vw,105px);
+line-height:.9;
+letter-spacing:-6px;
+color:var(--dark);
+margin-bottom:30px;
+}
+
+.hero h1 span{
+color:var(--blue);
+}
+
+.hero-description{
+font-size:19px;
+line-height:1.7;
+color:var(--gray);
+max-width:650px;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.btn{
+border:none;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:17px 28px;
+border-radius:15px;
+font-weight:900;
+font-size:15px;
+transition:.3s;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#09a7ff,#0061d5);
+color:white;
+box-shadow:0 15px 35px rgba(0,105,220,.25);
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 40px rgba(0,105,220,.35);
+}
+
+.btn-white{
+background:#fff;
+color:var(--dark);
+box-shadow:0 10px 30px rgba(0,60,120,.1);
+}
+
+.hero-image{
+height:650px;
+border-radius:40px;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(to top,rgba(0,35,80,.75),transparent 60%),
+url("https://images.unsplash.com/photo-1515706886582-54c73c5eaf41?auto=format&fit=crop&w=1400&q=90")
+center/cover;
+box-shadow:0 40px 90px rgba(0,65,120,.28);
+}
+
+.hero-image-text{
+position:absolute;
+bottom:35px;
+left:35px;
+color:#fff;
+}
+
+.hero-image-text h2{
+font-size:36px;
+margin-bottom:5px;
+}
+
+.hero-image-text p{
+opacity:.85;
+}
+
+.floating-card{
+position:absolute;
+top:45px;
+left:-35px;
+background:#fff;
+border-radius:20px;
+padding:18px 22px;
+box-shadow:0 20px 50px rgba(0,50,100,.18);
+font-weight:900;
+z-index:4;
+}
+
+.floating-card span{
+color:var(--blue);
+}
+
+
+/* ================= STATS ================= */
+
+.stats{
+background:#fff;
+padding:30px 0;
+position:relative;
+z-index:5;
+box-shadow:0 -10px 40px rgba(0,50,100,.05);
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+text-align:center;
+padding:18px;
+border-right:1px solid #e5eff5;
+}
+
+.stat:last-child{
+border:none;
+}
+
+.stat strong{
+display:block;
+font-size:32px;
+color:var(--blue);
+}
+
+.stat span{
+font-size:13px;
+font-weight:700;
+color:var(--gray);
+}
+
+
+/* ================= GENERAL SECTION ================= */
+
+section{
+padding:120px 0;
+}
+
+.section-title{
+text-align:center;
+max-width:800px;
+margin:0 auto 65px;
+}
+
+.section-title small{
+font-size:13px;
+font-weight:900;
+letter-spacing:3px;
+color:var(--blue);
+}
+
+.section-title h2{
+font-size:clamp(40px,5vw,68px);
+line-height:.95;
+letter-spacing:-3px;
+margin-top:12px;
+color:var(--dark);
+}
+
+.section-title p{
+color:var(--gray);
+font-size:17px;
+margin-top:20px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services{
+background:#fff;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.service{
+min-height:310px;
+padding:30px;
+border-radius:25px;
+background:#f7fcff;
+border:1px solid #e2f1f8;
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+.service:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(0,70,130,.12);
+}
+
+.service-icon{
+font-size:45px;
+margin-bottom:25px;
+}
+
+.service h3{
+font-size:23px;
+margin-bottom:12px;
+}
+
+.service p{
+color:var(--gray);
+font-size:14px;
+line-height:1.7;
+}
+
+.service-number{
+position:absolute;
+right:20px;
+bottom:10px;
+font-size:80px;
+font-weight:900;
+color:#e7f5fc;
+}
+
+
+/* ================= ICE ================= */
+
+.ice{
+background:
+radial-gradient(circle at 10% 10%,rgba(0,150,255,.15),transparent 30%),
+#eaf8ff;
+}
+
+.ice-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.ice-photo{
+height:650px;
+border-radius:35px;
+background:
+linear-gradient(145deg,rgba(0,100,200,.1),rgba(0,30,80,.35)),
+url("https://images.unsplash.com/photo-1578926288207-a90a5366759d?auto=format&fit=crop&w=1400&q=90")
+center/cover;
+box-shadow:0 30px 70px rgba(0,80,140,.2);
+}
+
+.ice-content small{
+font-weight:900;
+letter-spacing:3px;
+color:var(--blue);
+}
+
+.ice-content h2{
+font-size:clamp(42px,5vw,70px);
+line-height:.95;
+letter-spacing:-3px;
+color:var(--dark);
+margin:15px 0 25px;
+}
+
+.ice-content p{
+font-size:17px;
+line-height:1.8;
+color:var(--gray);
+margin-bottom:30px;
+}
+
+.checks{
+list-style:none;
+display:grid;
+gap:17px;
+margin-bottom:35px;
+}
+
+.checks li{
+display:flex;
+align-items:center;
+gap:13px;
+font-weight:800;
+}
+
+.check{
+width:30px;
+height:30px;
+display:grid;
+place-items:center;
+border-radius:50%;
+background:#d4f1ff;
+color:var(--blue);
+}
+
+
+/* ================= PRICES ================= */
+
+.prices{
+background:#fff;
+}
+
+.price-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.price{
+padding:40px;
+border-radius:30px;
+border:1px solid #e1edf5;
+background:#fbfdff;
+text-align:center;
+position:relative;
+}
+
+.price.featured{
+background:linear-gradient(145deg,#078fff,#004da8);
+color:white;
+transform:scale(1.06);
+box-shadow:0 30px 70px rgba(0,100,220,.3);
+}
+
+.popular{
+position:absolute;
+top:-14px;
+left:50%;
+transform:translateX(-50%);
+background:var(--orange);
+padding:7px 18px;
+border-radius:50px;
+font-size:11px;
+font-weight:900;
+}
+
+.price h3{
+font-size:24px;
+margin-bottom:20px;
+}
+
+.amount{
+font-size:50px;
+font-weight:900;
+color:var(--blue);
+margin-bottom:10px;
+}
+
+.featured .amount{
+color:#fff;
+}
+
+.amount small{
+font-size:14px;
+}
+
+.price p{
+color:var(--gray);
+font-size:14px;
+margin-bottom:25px;
+}
+
+.featured p{
+color:rgba(255,255,255,.8);
+}
+
+.price ul{
+list-style:none;
+text-align:left;
+display:grid;
+gap:12px;
+margin-bottom:30px;
+font-size:14px;
+}
+
+.price li::before{
+content:"✓";
+color:var(--blue);
+font-weight:900;
+margin-right:10px;
+}
+
+.featured li::before{
+color:#fff;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery-section{
+background:#f4fbff;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:1.4fr .8fr .8fr;
+grid-template-rows:280px 280px;
+gap:18px;
+}
+
+.gallery-item{
+border-radius:25px;
+background-position:center;
+background-size:cover;
+overflow:hidden;
+position:relative;
+transition:.4s;
+}
+
+.gallery-item:hover{
+transform:scale(1.015);
+}
+
+.gallery-item:nth-child(1){
+grid-row:span 2;
+background-image:url("https://images.unsplash.com/photo-1515706886582-54c73c5eaf41?auto=format&fit=crop&w=1200&q=90");
+}
+
+.gallery-item:nth-child(2){
+background-image:url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=90");
+}
+
+.gallery-item:nth-child(3){
+background-image:url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=90");
+}
+
+.gallery-item:nth-child(4){
+background-image:url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=90");
+}
+
+.gallery-item:nth-child(5){
+background-image:url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=90");
+}
+
+
+/* ================= EXPERIENCE ================= */
+
+.experience{
+background:#fff;
+}
+
+.experience-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.experience-card{
+padding:40px;
+border-radius:28px;
+background:linear-gradient(145deg,#f5fcff,#fff);
+border:1px solid #e2eff6;
+}
+
+.experience-card .big{
+font-size:55px;
+margin-bottom:25px;
+}
+
+.experience-card h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.experience-card p{
+color:var(--gray);
+line-height:1.7;
+}
+
+
+/* ================= FAQ ================= */
+
+.faq{
+background:#eaf8ff;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+details{
+background:#fff;
+margin-bottom:14px;
+border-radius:17px;
+padding:20px 25px;
+border:1px solid #dceef8;
+}
+
+summary{
+font-weight:900;
+font-size:17px;
+cursor:pointer;
+}
+
+details p{
+color:var(--gray);
+padding-top:15px;
+line-height:1.7;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact{
+background:linear-gradient(135deg,#022c55,#007de8);
+color:#fff;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.contact h2{
+font-size:clamp(45px,6vw,78px);
+line-height:.9;
+letter-spacing:-4px;
+margin-bottom:25px;
+}
+
+.contact-description{
+color:rgba(255,255,255,.75);
+font-size:17px;
+line-height:1.7;
+margin-bottom:30px;
+max-width:550px;
+}
+
+.contact-list{
+display:grid;
+gap:14px;
+}
+
+.contact-item{
+display:flex;
+align-items:center;
+gap:15px;
+background:rgba(255,255,255,.09);
+padding:18px;
+border-radius:17px;
+}
+
+.contact-icon{
+font-size:25px;
+}
+
+.map{
+height:500px;
+border-radius:35px;
+overflow:hidden;
+background:
+linear-gradient(rgba(0,50,100,.1),rgba(0,50,100,.3)),
+url("https://images.unsplash.com/photo-1524666041070-9e4b5e5a0f9d?auto=format&fit=crop&w=1200&q=90")
+center/cover;
+display:flex;
+align-items:flex-end;
+padding:25px;
+}
+
+.map-label{
+width:100%;
+padding:20px;
+background:#fff;
+color:var(--dark);
+border-radius:18px;
+font-weight:900;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+
+/* ================= CTA ================= */
+
+.cta{
+background:#fff;
+padding:80px 0;
+}
+
+.cta-box{
+border-radius:35px;
+padding:70px;
+text-align:center;
+background:
+radial-gradient(circle at 10% 20%,rgba(255,255,255,.2),transparent 30%),
+linear-gradient(135deg,#008fff,#0053b8);
+color:#fff;
+}
+
+.cta-box h2{
+font-size:clamp(40px,5vw,65px);
+line-height:1;
+margin-bottom:20px;
+}
+
+.cta-box p{
+color:rgba(255,255,255,.8);
+margin-bottom:30px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#022744;
+color:#fff;
+padding:55px 0 25px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:50px;
+padding-bottom:45px;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.footer-logo{
+font-size:23px;
+font-weight:900;
+margin-bottom:15px;
+}
+
+.footer p{
+color:rgba(255,255,255,.55);
+font-size:14px;
+line-height:1.7;
+}
+
+.footer h4{
+margin-bottom:17px;
+}
+
+.footer-links{
+list-style:none;
+display:grid;
+gap:10px;
+color:rgba(255,255,255,.6);
+font-size:14px;
+}
+
+.copyright{
+padding-top:25px;
+text-align:center;
+color:rgba(255,255,255,.4);
+font-size:13px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+z-index:3000;
+background:rgba(0,20,50,.75);
+backdrop-filter:blur(8px);
+place-items:center;
+padding:20px;
+}
+
+.modal.active{
+display:grid;
+}
+
+.modal-box{
+width:min(520px,100%);
+background:#fff;
+border-radius:28px;
+padding:40px;
+position:relative;
+animation:modal .25s ease;
+}
+
+@keyframes modal{
+from{
+opacity:0;
+transform:translateY(30px) scale(.95);
+}
+to{
+opacity:1;
+transform:none;
+}
+}
+
+.close{
+position:absolute;
+right:18px;
+top:18px;
+border:none;
+width:38px;
+height:38px;
+border-radius:50%;
+font-size:23px;
+background:#edf7fc;
+}
+
+.modal h2{
+font-size:32px;
+color:var(--dark);
+margin-bottom:8px;
+}
+
+.modal p{
+color:var(--gray);
+margin-bottom:25px;
+}
+
+.form-group{
+margin-bottom:17px;
+}
+
+.form-group label{
+display:block;
+font-size:13px;
+font-weight:900;
+margin-bottom:7px;
+}
+
+.form-group input,
+.form-group select{
+width:100%;
+padding:15px;
+border-radius:12px;
+border:1px solid #d8e8f2;
+font-size:15px;
+outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+border-color:var(--blue);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+.hero-content{
+grid-template-columns:1fr;
+}
+
+.hero-image{
+height:550px;
+}
+
+.service-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.ice-grid{
+grid-template-columns:1fr;
+}
+
+.ice-photo{
+height:550px;
+}
+
+}
+
+@media(max-width:800px){
+
+.menu{
+display:none;
+position:absolute;
+top:90px;
+left:5%;
+right:5%;
+background:#fff;
+padding:20px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,50,100,.15);
+flex-direction:column;
+align-items:stretch;
+gap:5px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu a{
+display:block;
+padding:12px;
+}
+
+.mobile-btn{
+display:block;
+}
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.stat{
+border-bottom:1px solid #e5eff5;
+}
+
+.price-grid{
+grid-template-columns:1fr;
+max-width:500px;
+}
+
+.price.featured{
+transform:none;
+}
+
+.experience-grid{
+grid-template-columns:1fr;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.container{
+width:92%;
+}
+
+section{
+padding:80px 0;
+}
+
+.hero{
+padding-top:110px;
+}
+
+.hero h1{
+font-size:55px;
+letter-spacing:-3px;
+}
+
+.hero-description{
+font-size:16px;
+}
+
+.hero-image{
+height:420px;
+border-radius:25px;
+}
+
+.floating-card{
+left:15px;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr 1fr;
+grid-template-rows:180px 180px 180px;
+}
+
+.gallery-item:nth-child(1){
+grid-row:span 2;
+}
+
+.gallery-item:nth-child(5){
+grid-column:span 2;
+}
+
+.ice-photo{
+height:400px;
+}
+
+.map{
+height:350px;
+}
+
+.cta-box{
+padding:45px 20px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+<div class="logo-icon">❄</div>
+MUZ SAROYI
+</a>
+
+<button class="mobile-btn" onclick="toggleMenu()">☰</button>
+
+<ul class="menu" id="menu">
+
+<li><a href="#home">Bosh sahifa</a></li>
+<li><a href="#services">Xizmatlar</a></li>
+<li><a href="#ice">Muz saroyi</a></li>
+<li><a href="#prices">Narxlar</a></li>
+<li><a href="#gallery">Galereya</a></li>
+<li><a href="#faq">FAQ</a></li>
+
+<li>
+<a href="#contact" class="nav-btn">
+Bog‘lanish
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<div class="tag">
+❄ SAMARQAND • FAMILY PARK
+</div>
+
+<h1>
+MUZDA<br>
+<span>BAHOR</span><br>
+KAYFIYATI.
+</h1>
+
+<p class="hero-description">
+Samarqanddagi eng qiziqarli oilaviy dam olish
+maskanlaridan biri. Muz uching, bowling o‘ynang,
+kartingda tezlikni his qiling va yaqinlaringiz bilan
+unutilmas kun o‘tkazing.
+</p>
+
+<div class="buttons">
+
+<a href="#prices" class="btn btn-primary">
+🎟 CHIPTA OLISH
+</a>
+
+<a href="#services" class="btn btn-white">
+BATAFSIL KO‘RISH →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<div class="floating-card">
+⭐ <span>Family Park</span><br>
+Samarqand
+</div>
+
+<div class="hero-image-text">
+
+<h2>Muz Saroyi</h2>
+
+<p>
+Oilaviy dam olish • Muz uchish • Ko‘ngilochar dasturlar
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>4+</strong>
+<span>Ko‘ngilochar zona</span>
+</div>
+
+<div class="stat">
+<strong>365</strong>
+<span>Kun davomida</span>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<span>Oilaviy kayfiyat</span>
+</div>
+
+<div class="stat">
+<strong>∞</strong>
+<span>Unutilmas xotiralar</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>FAMILY PARK</small>
+
+<h2>
+Bitta joyda<br>
+ko‘p zavq.
+</h2>
+
+<p>
+Butun oila uchun turli xil ko‘ngilochar
+xizmatlar bir joyda.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service">
+
+<div class="service-icon">⛸️</div>
+
+<h3>Muz Saroyi</h3>
+
+<p>
+Muz ustida uching, yangi harakatlarni
+o‘rganing va do‘stlaringiz bilan maroqli
+vaqt o‘tkazing.
+</p>
+
+<div class="service-number">01</div>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">🎳</div>
+
+<h3>Bowling</h3>
+
+<p>
+Do‘stlaringiz bilan raqobatlashing va
+eng ko‘p ochko to‘plashga harakat qiling.
+</p>
+
+<div class="service-number">02</div>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">🏎️</div>
+
+<h3>Karting</h3>
+
+<p>
+Tezlik, adrenalinning haqiqiy ta’mi va
+qiziqarli poyga sizni kutmoqda.
+</p>
+
+<div class="service-number">03</div>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">🎬</div>
+
+<h3>Kinoteatr</h3>
+
+<p>
+Sevimli filmlaringizni katta ekranda
+qulay sharoitda tomosha qiling.
+</p>
+
+<div class="service-number">04</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ICE PALACE -->
+
+<section class="ice" id="ice">
+
+<div class="container ice-grid">
+
+<div class="ice-photo"></div>
+
+
+<div class="ice-content">
+
+<small>MUZ SAROYI</small>
+
+<h2>
+Muz ustidagi<br>
+haqiqiy zavq.
+</h2>
+
+<p>
+Muz Saroyi — oilangiz, do‘stlaringiz yoki
+yaqin insonlaringiz bilan vaqt o‘tkazish uchun
+yaratilgan maxsus makon.
+</p>
+
+<ul class="checks">
+
+<li>
+<span class="check">✓</span>
+Bolalar uchun qulay
+</li>
+
+<li>
+<span class="check">✓</span>
+Do‘stlar bilan maroqli vaqt
+</li>
+
+<li>
+<span class="check">✓</span>
+Oilaviy dam olish
+</li>
+
+<li>
+<span class="check">✓</span>
+Zamonaviy muz maydoni
+</li>
+
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+📍 MANZILNI KO‘RISH
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRICES -->
+
+<section class="prices" id="prices">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>CHIPTALAR</small>
+
+<h2>
+O‘zingizga mos<br>
+tarifni tanlang.
+</h2>
+
+<p>
+Quyidagi narxlar namuna sifatida qo‘yilgan.
+Haqiqiy tariflaringizni keyin o‘zgartirish mumkin.
+</p>
+
+</div>
+
+
+<div class="price-grid">
+
+
+<div class="price">
+
+<h3>Bolalar</h3>
+
+<div class="amount">
+50 000 <small>so‘m</small>
+</div>
+
+<p>Muz saroyida uchish</p>
+
+<ul>
+<li>Muz maydoni</li>
+<li>Qulay muhit</li>
+<li>Oilaviy dam olish</li>
+</ul>
+
+<button class="btn btn-primary"
+onclick="openModal('Bolalar')">
+BUYURTMA
+</button>
+
+</div>
+
+
+<div class="price featured">
+
+<div class="popular">
+ENG MASHHUR
+</div>
+
+<h3>Kattalar</h3>
+
+<div class="amount">
+70 000 <small>so‘m</small>
+</div>
+
+<p>Muz saroyida uchish</p>
+
+<ul>
+<li>Muz maydoni</li>
+<li>Qulay muhit</li>
+<li>Oilaviy dam olish</li>
+</ul>
+
+<button class="btn btn-white"
+onclick="openModal('Kattalar')">
+BUYURTMA
+</button>
+
+</div>
+
+
+<div class="price">
+
+<h3>Oilaviy</h3>
+
+<div class="amount">
+220 000 <small>so‘m</small>
+</div>
+
+<p>4 kishilik paket</p>
+
+<ul>
+<li>4 kishilik kirish</li>
+<li>Muz maydoni</li>
+<li>Oilaviy dam olish</li>
+</ul>
+
+<button class="btn btn-primary"
+onclick="openModal('Oilaviy')">
+BUYURTMA
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery-section" id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>GALEREYA</small>
+
+<h2>
+Bu yerda har bir<br>
+lahza — xotira.
+</h2>
+
+<p>
+Family Park atmosferasini his qiling.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="gallery-item"></div>
+<div class="gallery-item"></div>
+<div class="gallery-item"></div>
+<div class="gallery-item"></div>
+<div class="gallery-item"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>TAJRIBA</small>
+
+<h2>
+Nima uchun<br>
+Family Park?
+</h2>
+
+</div>
+
+
+<div class="experience-grid">
+
+
+<div class="experience-card">
+
+<div class="big">👨‍👩‍👧‍👦</div>
+
+<h3>Butun oila uchun</h3>
+
+<p>
+Kichik bolalardan kattalargacha —
+har bir inson uchun qiziqarli mashg‘ulot
+topiladi.
+</p>
+
+</div>
+
+
+<div class="experience-card">
+
+<div class="big">✨</div>
+
+<h3>Unutilmas xotiralar</h3>
+
+<p>
+Tug‘ilgan kun, uchrashuv yoki oddiy
+dam olish kunini yanada qiziqarli
+qiling.
+</p>
+
+</div>
+
+
+<div class="experience-card">
+
+<div class="big">📸</div>
+
+<h3>Chiroyli lahzalar</h3>
+
+<p>
+Do‘stlaringiz va oilangiz bilan suratga
+tushing va eng yaxshi xotiralarni
+saqlab qoling.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>SAVOLLAR</small>
+
+<h2>
+Ko‘p beriladigan<br>
+savollar.
+</h2>
+
+</div>
+
+
+<div class="faq-container">
+
+<details>
+
+<summary>Muz Saroyiga qanday borish mumkin?</summary>
+
+<p>
+Family Park Samarqand shahrida,
+Narpay ko‘chasi 76 manzilida joylashgan.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Chipta qanday olinadi?</summary>
+
+<p>
+Saytdagi “Chipta olish” tugmasi orqali
+buyurtma qoldirishingiz mumkin.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Bolalar ham muz uchishi mumkinmi?</summary>
+
+<p>
+Ha. Bolalar uchun ham muz saroyida
+uchish imkoniyati mavjud.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Family Parkda yana nimalar bor?</summary>
+
+<p>
+Muz Saroyidan tashqari bowling, karting,
+kinoteatr va boshqa ko‘ngilochar
+maskanlar mavjud.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+Bugun kelib,<br>
+zavqlaning!
+</h2>
+
+<p>
+Oilaviy dam olish uchun eng yaxshi
+lahzalarni birga yarataylik.
+</p>
+
+<a href="#contact" class="btn btn-white">
+📍 MANZIL VA ALOQA
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container contact-grid">
+
+<div>
+
+<h2>
+Bizni<br>
+toping.
+</h2>
+
+<p class="contact-description">
+Savollaringiz bo‘lsa, biz bilan bog‘laning.
+Sizni Samarqanddagi Family Park
+Muz Saroyida kutamiz.
+</p>
+
+
+<div class="contact-list">
+
+<a href="tel:+998940444440" class="contact-item">
+
+<div class="contact-icon">📞</div>
+
+<div>
+<strong>Telefon</strong><br>
++998 94 044 44 40
+</div>
+
+</a>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">📍</div>
+
+<div>
+<strong>Manzil</strong><br>
+Narpay ko‘chasi 76, Samarqand
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">🕐</div>
+
+<div>
+<strong>Ish vaqti</strong><br>
+Har kuni
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="map">
+
+<div class="map-label">
+📍 Family Park — Samarqand
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+❄ MUZ SAROYI
+</div>
+
+<p>
+Family Park Samarqand —
+oila, do‘stlar va yaxshi
+xotiralar uchun.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Sayt</h4>
+
+<ul class="footer-links">
+<li><a href="#home">Bosh sahifa</a></li>
+<li><a href="#services">Xizmatlar</a></li>
+<li><a href="#prices">Narxlar</a></li>
+<li><a href="#gallery">Galereya</a></li>
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Xizmatlar</h4>
+
+<ul class="footer-links">
+<li>Muz Saroyi</li>
+<li>Bowling</li>
+<li>Karting</li>
+<li>Kinoteatr</li>
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Aloqa</h4>
+
+<ul class="footer-links">
+<li>+998 94 044 44 40</li>
+<li>Samarqand</li>
+<li>Narpay ko‘chasi 76</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+© 2026 MUZ SAROYI — FAMILY PARK SAMARQAND
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeModal()">×</button>
+
+<h2>Chipta buyurtma</h2>
+
+<p>
+Ma’lumotlaringizni qoldiring.
+</p>
+
+<form onsubmit="submitOrder(event)">
+
+<div class="form-group">
+
+<label>Ismingiz</label>
+
+<input
+id="name"
+type="text"
+placeholder="Ismingiz"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Telefon raqam</label>
+
+<input
+id="phone"
+type="tel"
+placeholder="+998 90 123 45 67"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Tarif</label>
+
+<select id="ticket">
+
+<option>Bolalar</option>
+<option>Kattalar</option>
+<option>Oilaviy</option>
+
+</select>
+
+</div>
+
+
+<button
+class="btn btn-primary"
+style="width:100%"
+type="submit">
+
+BUYURTMA BERISH
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document
+.getElementById("menu")
+.classList.toggle("active");
+
+}
+
+
+/* MODAL */
+
+function openModal(type){
+
+document
+.getElementById("modal")
+.classList.add("active");
+
+document
+.getElementById("ticket")
+.value=type;
+
+}
+
+
+function closeModal(){
+
+document
+.getElementById("modal")
+.classList.remove("active");
+
+}
+
+
+/* ORDER */
+
+function submitOrder(event){
+
+event.preventDefault();
+
+const name=
+document.getElementById("name").value;
+
+const phone=
+document.getElementById("phone").value;
+
+const ticket=
+document.getElementById("ticket").value;
+
+
+/*
+Telegram usernameingizni
+shu yerga yozing.
+
+Masalan:
+
+const telegram="familypark_samarqand";
+*/
+
+const telegram="YOUR_TELEGRAM_USERNAME";
+
+
+const message=
+`Assalomu alaykum!%0A%0A`+
+`🎟 Chipta buyurtmasi%0A`+
+`👤 Ism: ${encodeURIComponent(name)}%0A`+
+`📞 Telefon: ${encodeURIComponent(phone)}%0A`+
+`🎫 Tarif: ${encodeURIComponent(ticket)}`;
+
+
+if(telegram!=="YOUR_TELEGRAM_USERNAME"){
+
+window.open(
+`https://t.me/${telegram}?text=${message}`,
+"_blank"
+);
+
+}else{
+
+alert(
+"Buyurtma tayyor!%0A%0A"+
+"Telegram username hali sozlanmagan."
+);
+
+}
+
+closeModal();
+
+}
+
+
+/* CLOSE MODAL */
+
+document
+.getElementById("modal")
+.addEventListener("click",function(e){
+
+if(e.target===this){
+closeModal();
+}
+
+});
+
+
+/* CLOSE MOBILE MENU */
+
+document
+.querySelectorAll(".menu a")
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+document
+.getElementById("menu")
+.classList.remove("active");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
